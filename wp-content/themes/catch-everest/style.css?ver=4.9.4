@@ -1,0 +1,423 @@
+/*
+Theme Name: Catch Everest
+Theme URI: https://catchthemes.com/themes/catch-everest
+Author: Catch Themes
+Author URI: https://catchthemes.com
+Description: Catch Everest is Simple, Clean and Responsive WordPress Theme which automatically adapts to the screen's size, ensuring that your content is always displayed beautifully no matter what device visitors are using. It is based in HTML5, CSS3 and very own Catch Themes easy to use Theme Options panel which makes this theme highly customizable and flexible. Make your beautiful yet professional website in no time. Translation Ready and currently translated in Polish, Chinese, Spanish, Italian, German(SWITZERLAND), Russian, Japanese, French, Brazilian Portuguese, Dutch, German, Catalan, Turkish and Bosnian. Check out Theme Instructions at https://catchthemes.com/theme-instructions/catch-everest/, Support at https://catchthemes.com/support/ and Demo at https://catchthemes.com/demo/catch-everest/
+Version: 3.0.3
+License: GNU General Public License, version 3 (GPLv3)
+License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+Tags: one-column, two-columns, left-sidebar, right-sidebar, grid-layout, custom-background, custom-header, flexible-header, custom-menu, custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, portfolio
+Text Domain: catch-everest
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+#hgroup,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+
+/* =Clearing
+================================================== */
+
+/* Self Clearing Goodness */
+.container:after,
+#header-menu:after,
+#featured-post:after,
+#footer-menu:after,
+.entry-container:after,
+.entry-header:after,
+.entry-content:after,
+.widget:after,
+#supplementary:after,
+.site-info:after,
+.featued-content-wrap:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+
+/* =Structure
+----------------------------------------------- */
+
+.site {
+	width: 990px;
+	margin: 20px auto;
+}
+#hgroup-wrap,
+#main-feat-img {
+	clear: both;
+}
+#main-feat-img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+#header-left {
+    display: inline-block;
+    float: left;
+    max-width: 100%;
+}
+#primary {
+	clear: both;
+    float: left;
+    width: 570px;
+}
+#header-top {
+	float: right;
+}
+#header-right {
+	float: right;
+	max-width: 300px;
+}
+#secondary {
+    float: right;
+    width: 300px;
+}
+
+
+/* =Margins and Paddings
+----------------------------------------------- */
+
+.page-links,
+.widget,
+blockquote,
+.site-content article,
+.site-content .site-navigation,
+#infinite-handle,
+.comments-title, #reply-title,
+#respond {
+	margin-bottom: 40px;
+}
+#homepage-message {
+	margin-top: 40px;
+}
+.single-format-gallery .entry-meta {
+	margin-top: 30px;
+}
+article.sticky .featured-post,
+.page-header,
+p,
+.featured-image,
+.entry-content table,
+.comment-content table,
+.widget.widget_catcheverest_social_widget,
+#content .searchform,
+.page-link,
+.single-attachment .entry-attachment img {
+	margin-bottom: 30px;
+}
+.header-sidebar .widget,
+.entry-header,
+article.format-aside .entry-title,
+.comments-area article header,
+.widget-feat-content {
+	margin-bottom: 20px;
+}
+.page .entry-header,
+.widget-title,
+.header-sidebar .widget.widget_catcheverest_social_widget {
+	margin-bottom: 10px;
+}
+#featured-post .entry-header {
+	margin-bottom: 0;
+}
+.container {
+	padding: 0 40px;
+}
+#site-logo,
+#hgroup,
+.header-sidebar,
+#supplementary,
+#main {
+	padding-top: 40px;
+}
+#hgroup-wrap,
+.hentry,
+.comments-area article {
+	padding-bottom: 40px;
+}
+#site-generator .site-info {
+	padding: 30px 0;
+}
+.entry-header .entry-title {
+	padding-bottom: 10px;
+}
+.page .entry-header .entry-title,
+.tag-post-formats .entry-header .entry-title{
+	padding-bottom: 0;
+}
+.featured-sticky {
+    margin-bottom: 10px;	
+}
+
+
+/* =Font Size
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+#site-title {
+	font-size: 40px;
+    font-size: 4rem;
+}
+.entry-header .entry-title,
+#homepage-message {
+	font-size: 26px;
+	font-size: 2.6rem;
+}
+#homepage-message span {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+#featured-post .entry-title {
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: sans-serif, Arial;
+	line-height: 1.8;
+	text-rendering: optimizeLegibility;
+	word-wrap: break-word;
+}
+body {
+    background: url(images/noise.png) repeat scroll 0 0 transparent;
+}
+.site {
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+	-moz-box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+}
+hr {
+	background-color: #e6e6e6;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/* Text elements */
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+}
+code, kbd, tt, var {
+	font: 14px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+button,
+input,
+select,
+textarea {
+	border: 1px solid #e6e6e6;
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	padding: 10px;
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+button,
+input {
+	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+	*overflow: visible;  /* Corrects inner spacing displayed oddly in IE6/7 */
+}
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+article.post-password-required input[type=submit],
+li.bypostauthor cite span {
+	padding: 12px 20px 10px;
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 1.5;
+	font-weight: normal;
+	color: #7c7c7c;
+	background-color: #e6e6e6;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -ms-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -webkit-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -o-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: linear-gradient(top, #f4f4f4, #e6e6e6);
+	border: 1px solid #d2d2d2;
+	box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1);
+}
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+	cursor: pointer;
+}
+
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa #bbb;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02
